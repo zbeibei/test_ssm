@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--&lt;!&ndash; 配置分页插件 &ndash;&gt;-->
+    <!--<plugins>-->
+        <!--<plugin interceptor="com.github.pagehelper.PageHelper">-->
+            <!--&lt;!&ndash; 数据库方言 &ndash;&gt;-->
+            <!--<property name="dialect" value="mysql"/>-->
+        <!--</plugin>-->
+    <!--</plugins>-->
+
+    <settings>
+        <setting value="true" name="mapUnderscoreToCamelCase"></setting>
+    </settings>
+
+    <typeAliases>
+        <package name="top.beibei.beans"></package>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--分页参数合理化-->
+            <property name="reasonable" value="true"/>
+        </plugin>
+
+    </plugins>
+
+
+</configuration>
